@@ -378,7 +378,7 @@ function About() {
                             <div className="flex items-center">
                               <img
                                 className="size-9"
-                                src="src/assets/user.png"
+                                src="https://avatars.githubusercontent.com/u/99720342?s=400&u=3543f8364b23024e37674dae38345dff230d18c8&v=4"
                                 alt="yelp"
                               />
                               <div className="pl-3">
