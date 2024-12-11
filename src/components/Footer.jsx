@@ -3,7 +3,7 @@ import { FaTwitter, FaTiktok, FaGithub } from "react-icons/fa";
 function Footer() {
   return (
     <>
-      <div className="w-svw flex items-center justify-between border-t-2   border-line-colour">
+      <div className="w-svw flex items-center justify-between border-y-2   border-line-colour">
         <div className="flex items-center">
           <div className="px-5 py-4 border-e-2 border-line-colour">
             <h3 className="text-text-colour">find me in: </h3>
