@@ -9,15 +9,15 @@ import Socials from "@/components/socials";
 
 export default function Home() {
   return (
-    <div className="px-12">
+    <div className="md:px-12">
       <Header />
       <Intro />
       <About />
       <Projects />
       <OtherProjects />
       <Contact />
-      <Appreciation />
       <Socials />
+      <Appreciation />
     </div>
   );
 }

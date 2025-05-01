@@ -13,7 +13,7 @@ export default function Intro() {
           hidden: { opacity: 0 },
           show: { opacity: 1, transition: { delay: 1, staggerChildren: 0.4 } },
         }}
-        className="space-y-2 mx-6 md:mb-80 md:mt-36 md:w-[800px] lg:w-[1000px]  mt-10"
+        className="space-y-2 mt-24 mb-60 mx-6 md:mb-80 md:mt-36 md:w-[800px] lg:w-[1000px]  "
       >
         <motion.p
           variants={{
@@ -67,7 +67,11 @@ export default function Intro() {
           }}
           className="pt-4 "
         >
-          <CustomButton className="z-0" size={2} text="Check out my tiktok" />
+          <CustomButton
+            className="-z-100"
+            size={2}
+            text="Check out my tiktok"
+          />
         </motion.div>
       </motion.div>
     </div>

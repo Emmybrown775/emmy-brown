@@ -107,7 +107,11 @@ export default function Header() {
             <span className="text-secondary">04.</span>
             <br></br>Contact
           </a>
-          <CustomButton size={1} text="Resume" />
+          <CustomButton
+            size={1}
+            className="flex justify-center "
+            text="Resume"
+          />
         </div>
       </div>
     </div>
