@@ -166,18 +166,18 @@ export default function OtherProjects() {
                       transition: { duration: 0.5 },
                     },
                   }}
-                  className="px-6 bg-primary-light col-span-12 md:col-span-6 lg:col-span-4 py-7 rounded"
+                  className=" px-6 bg-primary-light group  transition-all duration-300 hover:-translate-y-2 col-span-12 md:col-span-6 lg:col-span-4 py-7 rounded"
                 >
                   <div className="flex justify-between items-center pb-8">
                     <Folder className="text-secondary" size={35} />
-                    <ExternalLink size={20} />
+                    <ExternalLink className="hover:text-secondary" size={20} />
                   </div>
                   <div className="space-y-3">
-                    <h3 className="text-lg font-sans font-bold text-header">
+                    <h3 className="text-lg set group-hover:text-secondary transition-all duration-150 font-sans font-bold text-header">
                       {project.title}
                     </h3>
                     <p className="font-sans">{project.description}</p>
-                    <p className="font-mono font-thin text-sm">
+                    <p className="font-mono  font-thin text-sm">
                       {project.technologies}
                     </p>
                   </div>

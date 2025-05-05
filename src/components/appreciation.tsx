@@ -9,7 +9,7 @@ export default function Appreciation() {
           Designed by Brittany Chiang.
         </h3>
         <div className="md:-me-11 md:flex justify-end md:w-min md:flex-col md:items-center md:space-y-10 hidden">
-          <h3 className="text-sm font-mono text-text -translate-y-14 rotate-90">
+          <h3 className="text-sm font-mono hover:text-secondary text-text -translate-y-14 rotate-90">
             elumezeemma@gmail.com
           </h3>
           <div className="w-px h-24 pt-7 bg-secondary md:block hidden"></div>

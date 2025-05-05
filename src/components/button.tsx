@@ -1,4 +1,9 @@
-export default function CustomButton({ size = 1, text = "", className = "" }) {
+export default function CustomButton({
+  size = 1,
+  text = "",
+  className = "",
+  onClick = () => {},
+}) {
   const getPaddingClass = () => {
     switch (size) {
       case 1:
@@ -15,7 +20,10 @@ export default function CustomButton({ size = 1, text = "", className = "" }) {
   };
 
   return (
-    <div className={`relative ${className} group text-sm font-mono text-text`}>
+    <div
+      onClick={onClick}
+      className={`relative ${className} group text-sm font-mono text-text`}
+    >
       <div
         className={`absolute ${getPaddingClass()} py-2 rounded bg-secondary opacity `}
       >

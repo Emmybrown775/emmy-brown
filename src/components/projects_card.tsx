@@ -62,8 +62,8 @@ export default function ProjectsCard({ className = "" }) {
             VS Code · Sublime Text · Atom · iTerm2 · Hyper
           </h4>
           <div className="flex justify-end pt-6 gap-5">
-            <Github />
-            <ExternalLink />
+            <Github className="hover:text-secondary transition-colors duration-150" />
+            <ExternalLink className="hover:text-secondary transition-colors duration-150" />
           </div>
         </div>
       </div>

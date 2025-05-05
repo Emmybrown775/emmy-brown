@@ -11,9 +11,10 @@ export default function About() {
         hidden: { opacity: 0 },
         show: { opacity: 1, transition: { staggerChildren: 0.2 } },
       }}
-      className="flex justify-center"
+      className="flex justify-center "
+      id="about"
     >
-      <div className="mx-6 md:w-[800px] lg:w-[1000px] md:flex">
+      <div className="mx-6 md:w-[800px] mt-60 md:mt-80 lg:w-[1000px] md:flex">
         <div>
           <div className="flex items-center gap-3">
             <motion.div

@@ -3,9 +3,37 @@
 import ProjectsCard from "./projects_card";
 import { motion } from "framer-motion";
 
+type FeaturedProject = {
+  title: string;
+  description: string;
+  image: string;
+  url: string;
+  github_link: string;
+  tools: string[];
+};
+
+const featuredProjects: FeaturedProject[] = [
+  {
+    title: "Project 1",
+    description: "Description of Project 1",
+    image: "/project1.png",
+    url: "https://project1.com",
+    github_link: "https://github.com/project1",
+    tools: ["React", "TypeScript", "Tailwind CSS"],
+  },
+  {
+    title: "Project 2",
+    description: "Description of Project 2",
+    image: "/project2.png",
+    url: "https://project2.com",
+    github_link: "https://github.com/project2",
+    tools: ["Next.js", "JavaScript", "Bootstrap"],
+  },
+];
+
 export default function Projects() {
   return (
-    <div className="flex justify-center">
+    <div id="projects" className="flex justify-center">
       <motion.div
         variants={{
           hidden: { opacity: 0 },

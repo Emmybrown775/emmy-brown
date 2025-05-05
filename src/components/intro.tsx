@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function Intro() {
   return (
-    <div className="flex justify-center">
+    <div className="flex  justify-center" id="intro">
       <motion.div
         initial="hidden"
         animate="show"
@@ -13,7 +13,7 @@ export default function Intro() {
           hidden: { opacity: 0 },
           show: { opacity: 1, transition: { delay: 1, staggerChildren: 0.4 } },
         }}
-        className="space-y-2 mt-24 mb-60 mx-6 md:mb-80 md:mt-36 md:w-[800px] lg:w-[1000px]  "
+        className="space-y-2 mx-6  md:w-[800px] mt-24  md:mt-36 lg:w-[1000px]  "
       >
         <motion.p
           variants={{
@@ -68,9 +68,12 @@ export default function Intro() {
           className="pt-4 "
         >
           <CustomButton
-            className="-z-100"
+            onClick={() => {
+              window.open("https://github.com/Emmybrown775", "_blank");
+            }}
+            className=""
             size={2}
-            text="Check out my tiktok"
+            text="Check out my repo"
           />
         </motion.div>
       </motion.div>
