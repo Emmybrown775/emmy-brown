@@ -3,6 +3,13 @@ import CustomButton from "./button";
 import { motion } from "framer-motion";
 
 export default function Contact() {
+  const handleEmail = () => {
+    const subject = encodeURIComponent("Project Inquiry");
+    const body = encodeURIComponent(
+      "Hi, I’d like to discuss a new project with you.",
+    );
+    window.location.href = `mailto:emmycodes775@gmail.com?subject=${subject}&body=${body}`;
+  };
   return (
     <div id="contact" className="flex justify-center">
       <motion.div
@@ -43,6 +50,7 @@ export default function Contact() {
             className="flex justify-center"
             size={2}
             text="Say Hello"
+            onClick={handleEmail}
           />
         </div>
       </motion.div>

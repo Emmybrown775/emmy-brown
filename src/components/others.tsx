@@ -2,6 +2,7 @@
 import { ExternalLink, Folder } from "@deemlol/next-icons";
 import CustomButton from "./button";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 // Define the Project type
 type Project = {
@@ -15,52 +16,37 @@ export default function OtherProjects() {
   // Sample project data
   const projects: Project[] = [
     {
-      title: "Integrating Algolia Search with Wordpress Multisite",
+      title: "Trust Button",
       description:
-        "Building a custom multisite compatible Wordpress plugin to build global search with Algolia",
-      technologies: "Algolia Wordpress PHP",
+        "A MicroSui-based IoT button that signs and sends transactions directly to the Sui blockchain without a backend. Demonstrates simple on-chain interactions via ESP32.",
+      technologies: "ESP32, MicroSui, Sui Blockchain, Arduino",
     },
     {
-      title: "Machine Learning Image Recognition",
+      title: "NFC Medical Records",
       description:
-        "Built a neural network to classify images of animals with 98% accuracy",
-      technologies: "Python TensorFlow PyTorch",
+        "A hospital record management system where patients use NFC cards to securely store and retrieve medical data. Uses Arduino and blockchain integration for privacy.",
+      technologies: "Arduino, Flask, NFC, Blockchain",
+      link: "https://github.com/Emmybrown775/mediVault_v2",
+    },
+
+    {
+      title: "Offline Learning Platform",
+      description:
+        "An online/offline learning platform for areas without smartphones or reliable internet. Accessible via two-way SMS or USSD codes.",
+      technologies: "Flask, AfricasTalking, SQLite, USSD, SMS",
+      link: "https://github.com/Emmybrown775/ourForum",
     },
     {
-      title: "E-commerce Mobile App",
+      title: "Voice Feedback Coach",
       description:
-        "Developed a cross-platform shopping app with real-time inventory updates",
-      technologies: "React Native Firebase Stripe",
+        "A voice analysis app that helps users practice public speaking. Records voice notes and gives feedback on clarity, pronunciation, and pacing.",
+      technologies: "Flask, Google Speech API, React, Web Audio API",
     },
     {
-      title: "Smart Home IoT Dashboard",
+      title: "Power Detector (ESP32-S2 Mini)",
       description:
-        "Created a central control system for managing all smart home devices",
-      technologies: "React Node.js MQTT",
-    },
-    {
-      title: "Blockchain Voting System",
-      description:
-        "Designed a secure, transparent voting platform using blockchain technology",
-      technologies: "Solidity Ethereum Web3.js",
-    },
-    {
-      title: "Augmented Reality Museum Guide",
-      description:
-        "Developed an AR app that provides information about exhibits when scanning them",
-      technologies: "Unity ARKit ARCore",
-    },
-    {
-      title: "Financial Data Visualization",
-      description:
-        "Created interactive charts for complex financial data analysis",
-      technologies: "D3.js TypeScript GraphQL",
-    },
-    {
-      title: "Real-time Collaboration Tool",
-      description:
-        "Built a platform for teams to work simultaneously on documents and designs",
-      technologies: "WebSockets Node.js MongoDB",
+        "A cost-effective IoT device that helped me check if i had power at home incase i was not around.",
+      technologies: "ESP32-S2 Mini, Relay, AC Sensor, Arduino",
     },
   ];
 
@@ -170,7 +156,16 @@ export default function OtherProjects() {
                 >
                   <div className="flex justify-between items-center pb-8">
                     <Folder className="text-secondary" size={35} />
-                    <ExternalLink className="hover:text-secondary" size={20} />
+                    {project.link ? (
+                      <Link href={project.link}>
+                        <ExternalLink
+                          className="hover:text-secondary"
+                          size={20}
+                        />
+                      </Link>
+                    ) : (
+                      <div></div>
+                    )}
                   </div>
                   <div className="space-y-3">
                     <h3 className="text-lg set group-hover:text-secondary transition-all duration-150 font-sans font-bold text-header">
@@ -192,6 +187,9 @@ export default function OtherProjects() {
             className="flex justify-center"
             size={2}
             text="Show More"
+            onClick={() => {
+              window.open("https://github.com/Emmybrown775");
+            }}
           ></CustomButton>
         </div>
       </motion.div>

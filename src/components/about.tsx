@@ -57,7 +57,7 @@ export default function About() {
               Hey! I’m Emmy, a{" "}
               <span className="text-secondary">full-stack</span> developer and{" "}
               <span className="text-secondary">embedded systems engineer </span>
-              who loves turning ideas into real, working tech—whether it’s a{" "}
+              who loves turning ideas into real, working tech whether it’s a{" "}
               <span className="text-secondary">
                 web app, a mobile-app, or a hardware project{" "}
               </span>{" "}
@@ -77,7 +77,7 @@ export default function About() {
               <br></br>
               <br></br> If it’s{" "}
               <span className="text-secondary">creative, impactful</span>, and
-              techy—I’m in!
+              techy I’m in!
             </p>
           </motion.div>
         </div>

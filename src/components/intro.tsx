@@ -13,7 +13,7 @@ export default function Intro() {
           hidden: { opacity: 0 },
           show: { opacity: 1, transition: { delay: 1, staggerChildren: 0.4 } },
         }}
-        className="space-y-2 mx-6  md:w-[800px] mt-24  md:mt-36 lg:w-[1000px]  "
+        className="space-y-2 mx-6  md:w-[800px] mt-24  md:mt-60 lg:w-[1000px]  "
       >
         <motion.p
           variants={{

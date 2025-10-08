@@ -149,7 +149,10 @@ export default function Header() {
           <CustomButton
             size={1}
             className="flex justify-center"
-            text="Resume"
+            text="Github"
+            onClick={() => {
+              window.open("https://github.com/Emmybrown775");
+            }}
           />
         </div>
       </div>

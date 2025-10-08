@@ -2,32 +2,56 @@
 
 import ProjectsCard from "./projects_card";
 import { motion } from "framer-motion";
+import github from "../assets/github.png";
+import portfolio from "../assets/images/portfolio.png";
+import robotControl from "../assets/images/robot-control.png";
+import step from "../assets/images/step.jpeg";
+import { StaticImageData } from "next/image";
 
-type FeaturedProject = {
+export type FeaturedProject = {
   title: string;
   description: string;
-  image: string;
+  image: StaticImageData;
   url: string;
   github_link: string;
   tools: string[];
 };
-
-const featuredProjects: FeaturedProject[] = [
+export const featuredProjects: FeaturedProject[] = [
   {
-    title: "Project 1",
-    description: "Description of Project 1",
-    image: "/project1.png",
-    url: "https://project1.com",
-    github_link: "https://github.com/project1",
-    tools: ["React", "TypeScript", "Tailwind CSS"],
+    title: "My Portfolio",
+    description:
+      "A modern, responsive developer portfolio built with Next.js and TypeScript to showcase my projects, skills, and achievements.",
+    image: portfolio,
+    url: "https://emmy-brown.pxxl.pro",
+    github_link: "https://github.com/Emmybrown775/emmy-brown",
+    tools: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
   },
   {
-    title: "Project 2",
-    description: "Description of Project 2",
-    image: "/project2.png",
-    url: "https://project2.com",
-    github_link: "https://github.com/project2",
-    tools: ["Next.js", "JavaScript", "Bootstrap"],
+    title: "LED Control App",
+    description:
+      "A TypeScript web app that connects to my custom-built LED hardware, allowing real-time on/off control and brightness adjustment.",
+    image: github,
+    url: "",
+    github_link: "https://github.com/Emmybrown775/my-led-control-app",
+    tools: ["TypeScript", "Expo/React-Native", "C++", "ESP", "Arduino"],
+  },
+  {
+    title: "SUI Robot Control",
+    description:
+      "A SUI smart contract with a web app allowing you control the robot i made anywhere in the world, via the SUI blockchain.",
+    image: robotControl,
+    url: "https://sui-robot-control.vercel.app",
+    github_link: "https://github.com/Emmybrown775/sui_robot_control",
+    tools: ["Move", "TypeScript", "SUI", "ZK-LOGIN"],
+  },
+  {
+    title: "Step-to-Sign — Smart In-Shoe Wallet & 2FA Signer",
+    description:
+      "A compact in-shoe hardware wallet that performs offline Sui transaction signing using foot-gesture recognition as a low-friction 2FA mechanism. The system pairs an ESP32 signer with a mobile app to securely sign and broadcast transactions without exposing private keys.",
+    image: step,
+    url: "https://x.com/EmmyCodes775/status/1962200410493534653?t=QW9XnzbrqXr9clF9loK0RA&s=19", // e.g. demo video or hosted docs
+    github_link: "https://github.com/Emmybrown775/step-to-sign-app",
+    tools: ["ESP32", "React Native (Expo)", "Sui", "Arduino", "BLE", "C/C++"],
   },
 ];
 
@@ -79,7 +103,27 @@ export default function Projects() {
           viewport={{ once: true }}
           className="my-10 "
         >
-          <ProjectsCard className=""></ProjectsCard>
+          {featuredProjects.map((project, index) => {
+            if (index % 2 === 0) {
+              return (
+                <ProjectsCard
+                  key={index}
+                  fliped={true}
+                  project={project}
+                  className=""
+                ></ProjectsCard>
+              );
+            } else {
+              return (
+                <ProjectsCard
+                  key={index}
+                  fliped={false}
+                  project={project}
+                  className=""
+                ></ProjectsCard>
+              );
+            }
+          })}
         </motion.div>
       </motion.div>
     </div>
