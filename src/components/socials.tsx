@@ -1,4 +1,4 @@
-import { Github, Twitter, Instagram } from "@deemlol/next-icons";
+import { Github, Twitter } from "@deemlol/next-icons";
 import Link from "next/link";
 
 export default function Socials() {

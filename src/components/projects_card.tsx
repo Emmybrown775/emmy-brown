@@ -1,8 +1,6 @@
 import { ExternalLink, Github } from "@deemlol/next-icons";
 import Image from "next/image";
-import github from "../assets/github.png";
 import { FeaturedProject } from "./projects";
-import { redirect } from "next/navigation";
 import Link from "next/link";
 
 interface ProjectsCardProps {
