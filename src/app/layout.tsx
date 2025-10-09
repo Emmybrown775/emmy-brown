@@ -86,7 +86,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {},
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION,
+  },
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
