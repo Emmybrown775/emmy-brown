@@ -2,10 +2,10 @@
 
 import ProjectsCard from "./projects_card";
 import { motion } from "framer-motion";
-import github from "../assets/github.png";
-import portfolio from "../assets/images/portfolio.png";
-import robotControl from "../assets/images/robot-control.png";
-import step from "../assets/images/step.jpeg";
+import github from "../../public/github.png";
+import portfolio from "../../public/images/portfolio.png";
+import robotControl from "../../public/images/robot-control.png";
+import step from "../../public/images/step.jpeg";
 import { StaticImageData } from "next/image";
 
 export type FeaturedProject = {
