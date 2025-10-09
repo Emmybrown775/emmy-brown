@@ -18,15 +18,6 @@ export type FeaturedProject = {
 };
 export const featuredProjects: FeaturedProject[] = [
   {
-    title: "My Portfolio",
-    description:
-      "A modern, responsive developer portfolio built with Next.js and TypeScript to showcase my projects, skills, and achievements.",
-    image: portfolio,
-    url: "https://emmy-brown.pxxl.pro",
-    github_link: "https://github.com/Emmybrown775/emmy-brown",
-    tools: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
-  },
-  {
     title: "LED Control App",
     description:
       "A TypeScript web app that connects to my custom-built LED hardware, allowing real-time on/off control and brightness adjustment.",
