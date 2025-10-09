@@ -33,7 +33,7 @@ export default function Header() {
 
   return (
     <div
-      className={`md:px-14 px-5 py-5 flex items-center justify-between fixed top-0 left-0 right-0 z-50 bg-background transition-opacity duration-300 ${
+      className={`md:px-14 px-5 py-5 flex items-center justify-between fixed top-0 left-0 right-0 z-[100] bg-background transition-opacity duration-300 ${
         isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
     >
